@@ -1,0 +1,70 @@
+/**
+ * Main less include file
+ *
+ * This file is copied from p3bootstrap. You have to run
+ * php composer.phar install --dev
+ * in order to get the imported files.
+ */
+
+/* import bootrap */
+@import "../../../../vendor/twitter/bootstrap/less/bootstrap.less";
+@import "../../../../vendor/twitter/bootstrap/less/responsive.less";
+
+/* use bootstrap with blueprint translation (for old extensions) */
+@import "../../../../vendor/phundament/lessii/translations/blueprint-bootstrap.less";
+
+/* USAGE IN EXTENSION PHUNDAMENT */
+/* import bootrap */
+/* @import "../../../../twitter/bootstrap/less/bootstrap.less";
+@import "../../../../twitter/bootstrap/less/responsive.less"; */
+/* use bootstrap with blueprint translation */
+/* @import "../../../lessii/translations/blueprint-bootstrap.less"; */
+
+/* override variables with local values */
+@import "variables.less";
+
+html {
+    overflow-y: scroll;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* iPhone Hacks */
+@media (max-width: 480px) {
+    .je-node INPUT {
+        width: 30%;
+    }
+    .cke_dialog {
+        zoom: 0.5;
+    }
+
+    div.form .row LABEL,
+    div.form .row INPUT,
+    div.form .row SELECT,
+    div.form .row TEXTAREA,
+    div.form .row .hint {
+        text-align: left;
+        margin-left: 0px;
+    }
+}
+
+.ckeditor LI {
+    height: 180px;
+}
+
+#p3-media-grid IMG.ckeditor {
+    height: auto;
+    width: 150px;
+    max-width: 150px;
+    max-height: 120px;
+}
