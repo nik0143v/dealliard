@@ -1,0 +1,58 @@
+{
+    "name": "phundament/app",
+    "description": "Yii Distribution",
+    "keywords": ["package", "dependency", "autoload"],
+    "homepage": "http://phundament.com/",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "authors": [
+    {
+        "name": "Tobias Munk",
+        "email": "schmunk@usrbin.de",
+        "homepage": "http://www.phundament.com"
+    }
+    ],
+    "repositories": [
+    {
+        "packagist": false
+    },{
+        "type":"composer",
+        "url": "http://packages.phundament.com"
+    }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "crisu83/yii-rights": "0.*",
+        "mishamx/yii-user": "0.*",
+        "phundament/p3admin": "0.8.*",
+        "phundament/p3widgets": "0.8.*",
+        "phundament/p3pages": "0.8.*",
+        "phundament/p3media": "0.8.*",
+        "phundament/themes/p3bootstrap": "0.7.*",
+        "phundament/gii-template-collection": "0.7.*",
+        "yiiext/fancybox-widget": "0.*",
+        "yiiext/lipsum-widget": "0.*",
+        "yiiext/migrate-command": "0.7.1.1"
+    },
+    "require-dev": {
+        "schmunk42/database-command": "0.8.*",
+        "phundament/lessii": "master@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "config": "./"
+        }
+    },
+    "scripts": {
+        "pre-install-cmd": "config\\ComposerCallback::preInstall",
+        "post-install-cmd": "config\\ComposerCallback::postInstall",
+        "pre-update-cmd": "config\\ComposerCallback::preUpdate",
+        "post-update-cmd": "config\\ComposerCallback::postUpdate",
+        "post-package-install": [
+        "config\\ComposerCallback::postPackageInstall"
+        ],
+        "post-package-update": [
+        "config\\ComposerCallback::postPackageUpdate"
+        ]
+    }
+}
